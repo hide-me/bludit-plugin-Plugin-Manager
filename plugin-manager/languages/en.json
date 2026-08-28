@@ -1,0 +1,33 @@
+{
+    "plugin-data": {
+        "name": "Plugin Manager",
+        "description": "Preserve plugin settings, delete plugins and install plugins from ZIP files."
+    },
+    "plugin-manager": "Plugin Manager",
+    "upload-help": "To install a new plugin, choose the plugin ZIP file and press the install button.",
+    "upload-plugin": "Install Plugin",
+    "delete": "Delete",
+    "delete-confirm": "Delete this plugin permanently?",
+    "invalid-security-token": "Invalid security token.",
+    "upload-file-missing": "Upload file is missing.",
+    "upload-failed-error": "Upload failed. Error code: ",
+    "invalid-uploaded-file": "Invalid uploaded file.",
+    "ziparchive-unavailable": "ZipArchive is not available.",
+    "invalid-zip": "Invalid ZIP file.",
+    "invalid-bludit-plugin-zip": "Invalid Bludit plugin ZIP.",
+    "invalid-plugin": "Invalid plugin.",
+    "plugin-already-exists": "Plugin already exists.",
+    "unsafe-zip": "Unsafe ZIP file.",
+    "could-not-create-plugin-directory": "Could not create plugin directory.",
+    "could-not-read-zip": "Could not read ZIP file.",
+    "could-not-write-plugin-file": "Could not write plugin file.",
+    "could-not-extract-plugin": "Could not extract plugin.",
+    "invalid-bludit-plugin": "Invalid Bludit plugin.",
+    "plugin-uploaded": "Plugin uploaded successfully.",
+    "cannot-delete-manager": "The Plugin Manager cannot delete itself.",
+    "plugin-folder-not-found": "Plugin folder not found: ",
+    "deactivate-before-delete": "Deactivate the plugin before deleting it.",
+    "could-not-delete-plugin-folder": "Could not delete plugin folder.",
+    "plugin-folder-still-exists": "Plugin folder still exists.",
+    "plugin-deleted": "Plugin deleted."
+}

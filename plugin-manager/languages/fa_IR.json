@@ -1,0 +1,33 @@
+{
+    "plugin-data": {
+        "name": "مدیریت پلاگین‌ها",
+        "description": "حفظ تنظیمات پلاگین‌ها، حذف پلاگین‌ها و نصب پلاگین از فایل ZIP."
+    },
+    "plugin-manager": "مدیریت پلاگین‌ها",
+    "upload-help": "برای نصب یک پلاگین جدید، فایل ZIP پلاگین را انتخاب کرده و دکمه نصب را فشار دهید.",
+    "upload-plugin": "نصب پلاگین",
+    "delete": "حذف",
+    "delete-confirm": "آیا می‌خواهید این پلاگین را برای همیشه حذف کنید؟",
+    "invalid-security-token": "توکن امنیتی نامعتبر است.",
+    "upload-file-missing": "فایل آپلود نشده است.",
+    "upload-failed-error": "آپلود ناموفق بود. کد خطا: ",
+    "invalid-uploaded-file": "فایل آپلود شده نامعتبر است.",
+    "ziparchive-unavailable": "ZipArchive در دسترس نیست.",
+    "invalid-zip": "فایل ZIP نامعتبر است.",
+    "invalid-bludit-plugin-zip": "فایل ZIP پلاگین Bludit نامعتبر است.",
+    "invalid-plugin": "پلاگین نامعتبر است.",
+    "plugin-already-exists": "این پلاگین قبلاً وجود دارد.",
+    "unsafe-zip": "فایل ZIP ناامن است.",
+    "could-not-create-plugin-directory": "ایجاد پوشه پلاگین امکان‌پذیر نیست.",
+    "could-not-read-zip": "خواندن فایل ZIP امکان‌پذیر نیست.",
+    "could-not-write-plugin-file": "نوشتن فایل پلاگین امکان‌پذیر نیست.",
+    "could-not-extract-plugin": "استخراج پلاگین امکان‌پذیر نیست.",
+    "invalid-bludit-plugin": "پلاگین Bludit نامعتبر است.",
+    "plugin-uploaded": "پلاگین با موفقیت آپلود شد.",
+    "cannot-delete-manager": "مدیر پلاگین‌ها را نمی‌توان حذف کرد.",
+    "plugin-folder-not-found": "پوشه پلاگین پیدا نشد: ",
+    "deactivate-before-delete": "قبل از حذف، پلاگین را غیرفعال کنید.",
+    "could-not-delete-plugin-folder": "حذف پوشه پلاگین امکان‌پذیر نیست.",
+    "plugin-folder-still-exists": "پوشه پلاگین همچنان وجود دارد.",
+    "plugin-deleted": "پلاگین با موفقیت حذف شد."
+}

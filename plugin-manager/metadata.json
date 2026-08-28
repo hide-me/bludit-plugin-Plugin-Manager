@@ -1,0 +1,11 @@
+{
+  "name": "Plugin Manager",
+  "author": "Linuxvaman",
+  "email": "medicamin@gmail.com",
+  "website": "https://linuxvaman.ir",
+  "version": "1.0.0",
+  "releaseDate": "2026-08-26",
+  "license": "MIT",
+  "compatible": "3.22",
+  "notes": "Preserve plugin settings, delete plugins and install plugins from ZIP files."
+}

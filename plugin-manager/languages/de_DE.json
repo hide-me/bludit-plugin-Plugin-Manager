@@ -1,0 +1,33 @@
+{
+    "plugin-data": {
+        "name": "Plugin-Manager",
+        "description": "Plugin-Einstellungen bewahren, Plugins löschen und Plugins aus ZIP-Dateien installieren."
+    },
+    "plugin-manager": "Plugin-Manager",
+    "upload-help": "Um ein neues Plugin zu installieren, wählen Sie die ZIP-Datei des Plugins aus und klicken Sie auf die Schaltfläche „Installieren“.",
+    "upload-plugin": "Plugin installieren",
+    "delete": "Löschen",
+    "delete-confirm": "Dieses Plugin dauerhaft löschen?",
+    "invalid-security-token": "Ungültiges Sicherheitstoken.",
+    "upload-file-missing": "Die Upload-Datei fehlt.",
+    "upload-failed-error": "Upload fehlgeschlagen. Fehlercode: ",
+    "invalid-uploaded-file": "Ungültige hochgeladene Datei.",
+    "ziparchive-unavailable": "ZipArchive ist nicht verfügbar.",
+    "invalid-zip": "Ungültige ZIP-Datei.",
+    "invalid-bludit-plugin-zip": "Ungültige Bludit-Plugin-ZIP-Datei.",
+    "invalid-plugin": "Ungültiges Plugin.",
+    "plugin-already-exists": "Das Plugin ist bereits vorhanden.",
+    "unsafe-zip": "Unsichere ZIP-Datei.",
+    "could-not-create-plugin-directory": "Das Plugin-Verzeichnis konnte nicht erstellt werden.",
+    "could-not-read-zip": "Die ZIP-Datei konnte nicht gelesen werden.",
+    "could-not-write-plugin-file": "Die Plugin-Datei konnte nicht geschrieben werden.",
+    "could-not-extract-plugin": "Das Plugin konnte nicht entpackt werden.",
+    "invalid-bludit-plugin": "Ungültiges Bludit-Plugin.",
+    "plugin-uploaded": "Plugin erfolgreich installiert.",
+    "cannot-delete-manager": "Der Plugin-Manager kann nicht selbst gelöscht werden.",
+    "plugin-folder-not-found": "Plugin-Verzeichnis nicht gefunden: ",
+    "deactivate-before-delete": "Deaktivieren Sie das Plugin, bevor Sie es löschen.",
+    "could-not-delete-plugin-folder": "Das Plugin-Verzeichnis konnte nicht gelöscht werden.",
+    "plugin-folder-still-exists": "Das Plugin-Verzeichnis ist noch vorhanden.",
+    "plugin-deleted": "Plugin erfolgreich gelöscht."
+}
