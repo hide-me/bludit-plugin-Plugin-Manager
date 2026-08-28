@@ -38,24 +38,22 @@ class PM_Manager
     }
 
     public static function pluginsPageUI(){
-        global $security;
-        
-        $managerUrl=HTML_PATH_ADMIN_ROOT."configure-plugin/pluginPluginManager";
-        $token=rawurlencode($security->getTokenCSRF());
-        $map=[];
-        $dirs=@scandir(PATH_PLUGINS);
-        if(is_array($dirs)){
-            foreach($dirs as $dir){
-                if($dir==="."||$dir===".."||!PM_Persistence::valid($dir))continue;
-                $pluginFile=rtrim(PATH_PLUGINS,DS).DS.$dir.DS."plugin.php";
-                if(!is_file($pluginFile))continue;
-                $code=@file_get_contents($pluginFile);
-                if($code!==false&&preg_match("/class\s+(plugin[A-Za-z0-9_]+)\s+extends\s+Plugin/",$code,$match))$map[$match[1]]=$dir;
-            }
+    	global $security, $plugins;
+
+    	$managerUrl=HTML_PATH_ADMIN_ROOT."configure-plugin/pluginPluginManager";
+    	$token=rawurlencode($security->getTokenCSRF());
+    	$map=[];
+	if(isset($plugins['all'])&&is_array($plugins['all'])){
+        foreach($plugins['all'] as $plugin){
+            if(!is_object($plugin))continue;
+            if(!isset($plugin->className)||!isset($plugin->directoryName))continue;
+
+            $map[$plugin->className]=$plugin->directoryName;
         }
-        $uploadText=self::t("upload-plugin","Upload Plugin");
-        $deleteText=self::t("delete","Delete");
-        $deleteConfirm=self::t("delete-confirm","Delete this plugin permanently?");
+    }
+    $uploadText=self::t("upload-plugin","Upload Plugin");
+    $deleteText=self::t("delete","Delete");
+    $deleteConfirm=self::t("delete-confirm","Delete this plugin permanently?");
         
         echo '<style>.pm-delete{margin-inline-start:12px;color:#dc3545!important;cursor:pointer}.pm-delete:hover{text-decoration:underline}.pm-upload-button{margin-left:15px;margin-right:15px}</style>';
         echo '<script>(function(){var pluginMap='.json_encode($map).',managerUrl='.json_encode($managerUrl).',csrfToken='.json_encode($token).';function pmInit(){var managerLinks=document.querySelectorAll(\'a[href*="/configure-plugin/"]\');for(var i=0;i<managerLinks.length;i++){var ml=managerLinks[i],mhref=ml.getAttribute("href")||"";if(mhref.indexOf('.json_encode("/configure-plugin/".self::$name).')!==-1){var row=ml.closest("tr");if(row)row.style.display="none";break}}var positions=null,allLinks=document.querySelectorAll("a[href]");for(var j=0;j<allLinks.length;j++){var ph=allLinks[j].getAttribute("href")||"";if(ph.replace(/\/+$/,"").match(/\/plugins-position$/)){positions=allLinks[j];break}}if(positions&&!document.querySelector(".pm-upload-button")){var upload=document.createElement("a");upload.className="pm-upload-button";upload.href=managerUrl;upload.innerHTML='.json_encode('<span class="fa fa-upload"></span> '.$uploadText).';positions.parentNode.insertBefore(upload,positions.nextSibling)}var activateLinks=document.querySelectorAll(\'a[href*="/install-plugin/"]\');for(var k=0;k<activateLinks.length;k++){var activate=activateLinks[k];if(activate.getAttribute("data-pm"))continue;var ahref=activate.getAttribute("href")||"",m=ahref.match(/\/install-plugin\/([^\/?#]+)/);if(!m)continue;var className=decodeURIComponent(m[1]);if(className==="pluginPluginManager")continue;var realFolder=pluginMap[className];if(!realFolder)continue;var del=document.createElement("a");del.className="pm-delete";del.textContent='.json_encode(" ".$deleteText).';del.href='.json_encode($managerUrl."?pm_action=delete&tokenCSRF=".$token."&plugin=").'+encodeURIComponent(realFolder);del.onclick=function(e){if(!confirm('.json_encode($deleteConfirm).')){e.preventDefault();return false}return true};activate.parentNode.insertBefore(del,activate.nextSibling);activate.setAttribute("data-pm","1")}}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",pmInit);else pmInit()})();</script>';
